@@ -153,7 +153,7 @@ impl ShulkerBoxBlock {
             compound.put_byte("Slot", *slot as i8);
             let mut item_compound = NbtCompound::new();
             stack.write_item_stack(&mut item_compound);
-            compound.put_component("item", item_compound);
+            compound.put_compound("item", item_compound);
             tags.push(NbtTag::Compound(compound));
         }
 
